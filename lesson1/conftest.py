@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 
 LINK = 'https://www.saucedemo.com/'
 INVENTORYLINK = "https://www.saucedemo.com/inventory.html"
+
+ADD_TO_CART_TEXT = "Add to cart"
+
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()

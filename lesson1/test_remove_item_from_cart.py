@@ -1,21 +1,22 @@
 import time
 from selenium.webdriver.common.by import By
+from conftest import ADD_TO_CART_TEXT
 
 def test_delete_item_from_cart(driver, login_by_standard_user):
-    choose_item = driver.find_element(By.CSS_SELECTOR, '#item_0_title_link')
-    choose_item.click()
 
     add_to_cart_button = driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-bike-light')
     add_to_cart_button.click()
 
-    go_to_cart = driver.find_element(By.CSS_SELECTOR, '.shopping_cart_link')
-    go_to_cart.click()
+    cart_badge = driver.find_element(By.XPATH, '//span[@class="shopping_cart_badge"]').text
 
-    item = driver.find_element(By.CLASS_NAME, 'cart_item')
+    assert cart_badge == '1'
+
     remove_button = driver.find_element(By.NAME, 'remove-sauce-labs-bike-light')
     remove_button.click()
     time.sleep(3)
 
-    assert item.is_displayed() is False
+    add_to_cart_button_text = driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-bike-light').text
+
+    assert add_to_cart_button_text == ADD_TO_CART_TEXT
 
     driver.quit()
