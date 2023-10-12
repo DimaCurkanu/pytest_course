@@ -20,7 +20,7 @@ def test_login_form():
 
     choose_item = driver.find_element(By.CSS_SELECTOR, '#item_0_title_link')
     choose_item.click()
-    # time.sleep(3)
+    time.sleep(3)
 
     add_to_cart_button = driver.find_element(By.CSS_SELECTOR,'#add-to-cart-sauce-labs-bike-light')
     add_to_cart_button.click()
