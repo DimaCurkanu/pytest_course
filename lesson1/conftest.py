@@ -6,6 +6,7 @@ LINK = 'https://www.saucedemo.com/'
 INVENTORYLINK = "https://www.saucedemo.com/inventory.html"
 
 ADD_TO_CART_TEXT = "Add to cart"
+YOUR_CART_TEXT = "Your Cart"
 
 @pytest.fixture()
 def driver():
