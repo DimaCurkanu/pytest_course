@@ -7,6 +7,10 @@ INVENTORYLINK = "https://www.saucedemo.com/inventory.html"
 
 ADD_TO_CART_TEXT = "Add to cart"
 YOUR_CART_TEXT = "Your Cart"
+USER_FIRST_NAME = "John"
+USER_LAST_NAME = "Dow"
+USER_ZIP_CODE = "78600"
+CONFIRM_TEXT = "Thank you for your order!"
 
 @pytest.fixture()
 def driver():
