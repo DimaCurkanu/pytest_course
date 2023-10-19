@@ -9,6 +9,9 @@ def test_burger_menu_log_out(driver, login_by_standard_user):
     logout_btn.click()
 
     login_btn = driver.find_element(By.ID, 'login-button')
+    value_info = login_btn.get_attribute("value")
+
+    assert value_info == "Login"
 
     assert login_btn.is_displayed() is True
 

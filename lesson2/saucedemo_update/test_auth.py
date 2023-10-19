@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time 
 from locators import USERNAME_FIELD, PASSWORD_FIELD, LOGIN_BUTTON
-from data import LOGIN, PASSWORD, MAIN_PAGE
+from data import LOGIN, PASSWORD, MAIN_PAGE, INVENTORY_PADE
 
 def test_login_form(driver):
     driver.get(MAIN_PAGE)
@@ -17,5 +17,5 @@ def test_login_form(driver):
     driver.find_element(By.XPATH, LOGIN_BUTTON).click()
 
     time.sleep(5)
-    assert driver.current_url == "https://www.saucedemo.com/inventory.html"
+    assert driver.current_url == INVENTORY_PADE
 
