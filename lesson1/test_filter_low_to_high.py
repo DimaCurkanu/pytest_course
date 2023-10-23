@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 def test_filter_hi_lo(driver, login_by_standard_user):
 
-    low_price = driver.find_element(By.CSS_SELECTOR, '#inventory_container > div > div:nth-child(5) > div.inventory_item_description > div.pricebar > div').text
+    low_price = driver.find_element(By.CSS_SELECTOR, 'div.inventory_item:nth-of-type(5) div.inventory_item_price').text
 
     select_filter_btn = driver.find_element(By.XPATH, '//span[@class="select_container"]')
     select_filter_btn.click()
