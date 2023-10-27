@@ -1,7 +1,13 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-import pytest
+from selenium.webdriver.support.ui import WebDriverWait
+
+LINK = 'https://victoretc.github.io/selenium_waits/'
+
+HEADER_TEXT = 'Практика с ожиданиями в Selenium'
+LOGIN_TEXT = 'Dima Curkanu'
+PASSWORD = '12345678'
 
 @pytest.fixture
 def chrome_options():
@@ -16,12 +22,8 @@ def driver(chrome_options):
     yield driver
     driver.quit()
 
-def test_visible_after_with_implicit_wait(driver):
-    driver.get('https://demoqa.com/dynamic-properties')
-    visible_after_button = driver.find_element(By.XPATH, "//button[text()='Visible After 5 Seconds']")
-    assert visible_after_button.is_displayed()
-
-
-
-
+@pytest.fixture
+def wait(driver):
+    wait = WebDriverWait(driver, timeout=10)
+    return wait
 
