@@ -9,6 +9,7 @@ HEADER_TEXT = 'Практика с ожиданиями в Selenium'
 LOGIN_TEXT = 'Dima Curkanu'
 PASSWORD = '12345678'
 SUCCESS_TEXT = 'Вы успешно зарегистрированы!'
+ALERT_TEXT = 'Пожалуйста, заполните все поля и согласитесь с правилами.'
 
 @pytest.fixture
 def chrome_options():

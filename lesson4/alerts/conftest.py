@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 def options():
     options = Options()
     options.add_argument('--window-size=2880,1800')
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     return options 
 
 
