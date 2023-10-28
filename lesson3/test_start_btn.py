@@ -7,4 +7,4 @@ def test_url_wait(driver, wait):
     driver.get(LINK)
     start_btn = wait.until(EC.element_to_be_clickable((By.ID, 'startTest')))
 
-    assert start_btn.is_displayed() == True
+    assert start_btn.is_enabled() == True

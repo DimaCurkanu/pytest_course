@@ -8,6 +8,7 @@ LINK = 'https://victoretc.github.io/selenium_waits/'
 HEADER_TEXT = 'Практика с ожиданиями в Selenium'
 LOGIN_TEXT = 'Dima Curkanu'
 PASSWORD = '12345678'
+SUCCESS_TEXT = 'Вы успешно зарегистрированы!'
 
 @pytest.fixture
 def chrome_options():
